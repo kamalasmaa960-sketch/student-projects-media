@@ -4,11 +4,11 @@
 - Cloudflare Worker
 - Durable Object + SQLite
 - WebSocket للمزامنة الفورية
-- Cloudflare R2 للصور/الفيديوهات المرفوعة
+- روابط URLs للصور والفيديوهات محفوظة في Durable Object + SQLite
 - Static Assets للواجهة
 
 ## التشغيل
-1. أنشئ R2 bucket باسم `student-projects-media` في Cloudflare، أو غيّر `bucket_name` في wrangler.toml.
+1. لا تحتاج إلى إنشاء خدمة تخزين ملفات خارجية. الصور والفيديوهات المضافة من الكونترول تُحفظ كروابط URLs فقط في قاعدة البيانات.
 2. من مجلد المشروع نفّذ `npx wrangler login`.
 3. نفّذ `npx wrangler deploy`.
 
