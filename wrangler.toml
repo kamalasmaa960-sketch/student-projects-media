@@ -1,0 +1,19 @@
+name = "student-projects-complete"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[assets]
+directory = "./public"
+
+[durable_objects]
+bindings = [
+  { name = "DB", class_name = "ProjectDatabase" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ProjectDatabase"]
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "student-projects-media"
